@@ -36,7 +36,7 @@ jobs:
                   context: .
                   push: true
                   tags: |
-                      brsktdev/fluxo-webapp:${{ github.ref_name }} # dev ou main
+                      brsktdev/fluxo-webapp:${{ github.ref_name }}
 
             - name: Create Git Tag (only on main)
               if: github.ref_name == 'main'

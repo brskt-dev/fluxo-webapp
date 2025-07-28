@@ -1,0 +1,12 @@
+services:
+  fluxo-webapp:
+    image: brsktdev/fluxo-webapp:dev
+    labels:
+      caddy: dev.fluxo.bonelesslab.com
+      caddy.reverse_proxy: "{{upstreams 80}}"
+    networks:
+      - caddy
+
+networks:
+  caddy:
+    external: true
